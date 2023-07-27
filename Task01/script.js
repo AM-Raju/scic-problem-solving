@@ -1,15 +1,18 @@
+const reverseString = (string) => {
+  // Converting string to an array
+  const stringArray = string.split("");
+  let revStringArray = [];
+
+  // Loop to reverse the array
+  for (let letter of stringArray) {
+    revStringArray.unshift(letter);
+  }
+
+  // Join the reverse array to get reverse string
+  return revStringArray.join("");
+};
+
 // given string
 const string = "Programming Hero";
-
-// Converting string to an array
-const stringArray = string.split("");
-let revStringArray = [];
-
-// Loop to reverse the array
-for (letter of stringArray) {
-  revStringArray.unshift(letter);
-}
-
-// Join the reverse array to get reverse string
-revString = revStringArray.join("");
-console.log(revString);
+const output = reverseString(string);
+console.log(output);
